@@ -1,4 +1,9 @@
+from pydantic import BaseModel
 from fastapi import FastAPI
+
+class Post(BaseModel):
+    title: str
+    content: str
 
 app = FastAPI()
 
@@ -29,3 +34,13 @@ def get_post_with_id(post_id: int):
         if item["id"] == post_id:
             return item
     return {"data": f"Post With Id {post_id} Not Found!!"}
+
+@app.post("/posts/")
+def create_item(post: Post):
+    item = {
+        "id": 3,
+        "title": post.title,
+        "content": post.content,
+    }
+    posts.append(item)
+    return item
