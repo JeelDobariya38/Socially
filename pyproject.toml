@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "socially"
+version = "0.1.0"
+description = "A simple social media app. it create to learn api development with python and fastapi."
+authors = ["Jeel Dobariya <jeeldobariya38@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["all"], version = "^0.104.1"}
+mysql-connector-python = "^8.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
