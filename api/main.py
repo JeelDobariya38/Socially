@@ -4,25 +4,13 @@ import models
 
 app = FastAPI()
 
-posts = [
-    {
-        "id": 1,
-        "title": "my first post",
-        "content": "placeholder content....",
-    },
-    {
-        "id": 2,
-        "title": "my second post",
-        "content": "placeholder demo content....",
-    }
-]
-
 @app.get("/")
 def root():
-    return {"name": "simple api", "msg": "hello", "version": "v0.1.0-alpha"}
+    return {"name": "Socially", "message": "hello, welcome to socially api!!", "version": "v0.1.0"}
 
 @app.get("/posts")
 def get_posts():
+    post = getposts()
     return {"posts": posts}
 
 @app.get("/posts/{post_id}")
