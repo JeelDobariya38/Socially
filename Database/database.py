@@ -17,9 +17,11 @@ def execute_query(query: str):
         database="socially")
     cursor = connection.cursor()
     cursor.execute(query)
+    data = cursor.fetchall()
     connection.commit()
     cursor.close()
     connection.close()
+    return data
 
 
 def create_database():

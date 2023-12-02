@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "social-media-clone"
+name = "socially"
 version = "0.1.0"
-description = ""
+description = "A simple social media app. it create to learn api development with python and fastapi."
 authors = ["Jeel Dobariya <jeeldobariya38@gmail.com>"]
 readme = "README.md"
 
